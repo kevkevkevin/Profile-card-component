@@ -1,0 +1,140 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    overflow: hidden;
+    width: 100vw;
+    height: 100vh;
+    font-family: 'Kumbh Sans', sans-serif;
+    background: url('images/bg.jpg');
+    background-size: cover;
+    background-position: center;
+}
+
+.main {
+    background: #00B6C7;
+    width: 60%;
+    padding: 120px;
+    display: flex;
+    margin: 0 auto;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.main::before {
+    content: "";
+    background: url('images/bg-pattern-top.svg');
+    width: 50%;
+    height: 50%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: rotate(-180deg);
+}
+
+.main::after {
+    content: "";
+    background: url(images/bg-pattern-bottom.svg);
+    width: 50%;
+    height: 50%;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+}
+
+.cardWrapper {
+    width: 35%;
+    text-align: center;
+    margin: 0 auto;
+    background: #fff;
+    border-radius: 35px;
+    background-image: url(images/bg-pattern-card.svg);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: top;
+    z-index: 99999;
+    -webkit-box-shadow: 0px 0px 40px 13px rgba(0,0,0,0.11);
+    -moz-box-shadow: 0px 0px 40px 13px rgba(0,0,0,0.11);
+    box-shadow: 0px 0px 40px 13px rgba(0,0,0,0.11);
+}
+
+.cardImage {
+    width: 90px;
+    height: 90px;
+    border: 2px solid #fff;
+    border-radius: 50%;
+    margin: 28% 0 0;
+}
+
+.cardtitle {
+    font-weight: 800;
+    font-size: 1.2rem;
+    margin: 20px 0 5px;
+}
+
+.cardtitle span {
+    font-weight: 800;
+    color: #969696;
+}
+
+.cardLoc {
+    color: #969696;
+    font-size: .8rem;
+    font-weight: 800;
+}
+
+.cardNum {
+    list-style: none;
+    padding:0 ;
+    border-top: 1px solid #96969629;
+}
+
+.cardNum li {
+    display: inline-block;
+    padding: 22px;
+}
+
+.item {
+    font-weight: 800;
+    font-size: 1.1rem;
+}
+
+.item span {
+    font-size: .8rem;
+    color: #969696;
+    letter-spacing: 1px;
+}
+
+@media screen and (max-width: 1200px) {
+    .cardWrapper {
+        width: 50%;
+    }
+}
+
+
+@media screen and (max-width: 600px) {
+    .main {
+        height: 100vh;
+        display: block;
+        
+    }
+
+    .cardWrapper {
+        width: 100%;
+        position: relative;
+        top: 50%;
+        transform: translate(0%, -50%);
+    }
+}
+
+@media screen and (max-width: 375px) {
+    .main {
+        width: 100vw;
+    }
+    .cardWrapper {
+        width: 84%;
+    }
+
+}
